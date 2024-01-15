@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Înregistrare Utilizator | ClassCoord</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/navbar-admin2.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/adaugare_useri.css')}}"/>
+</head>
+
+<body class="bg-light">
+<header>
+    <div class="nav">
+        <div class="header-left">
+            <h1><span class="logo">ClassCoord</span></h1>
+        </div>
+        <div class="header-right">
+            <nav>
+                <ul class="nav-list">
+                     <li><a href="/" class="active">Acasă</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownOrar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Gestionare Orare
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownOrar">
+                            <li><a class="dropdown-item" href="/orar_grupe_admin">Orar Grupe</a></li>
+                            <li><a class="dropdown-item" href="/orar_profesori_admin">Orar Profesori</a></li>
+                            <li><a class="dropdown-item" href="/orar_sali_admin">Orar Săli</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAdauga" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Gestionare date
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownAdauga">
+                            <li><a class="dropdown-item" href="/formular_adauga_sala">Adaugă Săli</a></li>
+                            <li><a class="dropdown-item" href="/formular_adauga_materii">Adaugă Materii</a></li>
+                            <li><a class="dropdown-item" href="/formular_adauga_departament">Adaugă Departamente</a></li>
+                            <li><a class="dropdown-item" href="/formular_adauga_grupe">Adaugă Grupe</a></li>
+                            <li><a class="dropdown-item" href="/formular_adauga_profesori">Adaugă Profesori</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/admin_register">Creare utilizatori</a></li>
+                </ul>
+            </nav>
+            <a href="/logout" class="login-btn">Logout</a>
+        </div>
+    </div>
+</header>
+
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <!-- Tabelul cu utilizatori -->
+        <div class="col-md-6">
+            <h3>Utilizatori Înregistrați</h3>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nume Utilizator</th>
+                            <th>Email</th>
+                            <th>Acțiuni</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for user in users %}
+                            <tr>
+                                <td>{{ loop.index }}</td>
+                                <td>{{ user.username }}</td>
+                                <td>{{ user.email }}</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editUserModal"
+                                            data-user='{"id": "{{ user.id }}", "username": "{{ user.username }}", "email": "{{ user.email }}"}'>
+                                        <i class="bi bi-pencil-square"></i>
+                                    </button>
+                                    <button class="btn btn-danger btn-sm" onclick="deleteUser('{{ user.id }}')">
+                                        <i class="bi bi-trash-fill"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- form de inregistrare -->
+        <div class="col-md-6">
+            <h2>Înregistrare Utilizator Nou</h2>
+            {% if msg %}
+                <div class="alert alert-success">
+                    <i class="bi bi-check-circle-fill me-2"></i>{{ msg }}
+                </div>
+            {% endif %}
+            <form id="formAdaugaUser" action="/admin_register" method="post">
+                <div class="form-group">
+                    <label for="username">Nume utilizator:</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Parolă:</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-person-plus-fill me-2"></i>Înregistrează
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal pentru editare -->
+<div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editUserModalLabel">Editare Utilizator</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editUserForm">
+                    <input type="hidden" id="editUserId" name="id">
+                    <div class="form-group">
+                        <label for="editUsername">Nume utilizator:</label>
+                        <input type="text" class="form-control" id="editUsername" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editEmail">Email:</label>
+                        <input type="email" class="form-control" id="editEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editPassword">Parolă Nouă (lăsați gol pentru a păstra parola actuală):</label>
+                        <input type="password" class="form-control" id="editPassword" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-check-circle me-2"></i>Salvează Modificările
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/navbar-admin.js') }}"></script>
+
+<script>
+    // Actualizare pentru Bootstrap 5
+    const editUserModal = document.getElementById('editUserModal');
+    if (editUserModal) {
+        editUserModal.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+            const user = JSON.parse(button.getAttribute('data-user'));
+            
+            const modal = this;
+            modal.querySelector('#editUserId').value = user.id;
+            modal.querySelector('#editUsername').value = user.username;
+            modal.querySelector('#editEmail').value = user.email;
+        });
+    }
+
+    document.getElementById('editUserForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        const data = {};
+        formData.forEach((value, key) => data[key] = value);
+        
+        fetch('/edit_user', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            const modal = bootstrap.Modal.getInstance(document.getElementById('editUserModal'));
+            modal.hide();
+            window.location.reload();
+        });
+    });
+
+    function deleteUser(userId) {
+        if (confirm('Ești sigur că vrei să ștergi acest utilizator?')) {
+            fetch('/delete_user', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({id: userId})
+            })
+            .then(response => response.json())
+            .then(() => {
+                window.location.reload();
+            });
+        }
+    }
+</script>
+</body>
+</html>

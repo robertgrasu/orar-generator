@@ -1,0 +1,1476 @@
+{
+    "1211": {
+        "saptamana_impara": {
+            "Luni": {
+                "9": {
+                    "materie": "Analiza matematica",
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Marcelina  Cristina Mocanu"
+                },
+                "10": {
+                    "materie": "Analiza matematica",
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Marcelina  Cristina Mocanu"
+                },
+                "11": {
+                    "materie": "Algebra liniara",
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Lungu Otilia"
+                },
+                "12": {
+                    "materie": "Algebra liniara",
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Lungu Otilia"
+                },
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Marti": {
+                 "9": {
+                    "materie": "Chimie (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP6", 
+                    "profesor": "Muntianu Gabriela"
+                 },
+                 "10": {
+                    "materie": "Chimie (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP6", 
+                    "profesor": "Muntianu Gabriela"
+                 },
+                 "11": {
+                    "materie": "Protectia mediului",
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Panainte Lehadus-Mirela"
+                 },
+                 "12": {
+                    "materie": "Protectia mediului",
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Panainte Lehadus-Mirela"
+                 },
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Miercuri": {
+                "9": null, 
+                "10": null,
+                "11": null,
+                "12": null,
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Joi": {
+                "9": {
+                    "materie": "Programarea calculatoarelor si limbaje de programare 1",
+                    "tip_ora": "curs",
+                    "sala": "DP12", 
+                    "profesor": "Olaru Ionel"
+                 },
+                 "10": {
+                    "materie": "Programarea calculatoarelor si limbaje de programare 1",
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Olaru Ionel"
+                 },
+                 "11": null,
+                 "12": null,
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Vineri": {
+                "9": {
+                    "materie": "Programarea calculatoarelor si limbaje de programare 1 (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP4", 
+                    "profesor": "Olaru Ionel"
+                },
+                "10": {
+                    "materie": "Programarea calculatoarelor si limbaje de programare 1 (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP4", 
+                    "profesor": "Olaru Ionel"
+                },
+                "11": {
+                    "materie": "Chimie", 
+                    "tip_ora": "curs",
+                    "sala": "DP12", 
+                    "profesor": "Rosu Ana-Maria"
+                 },
+                 "12": {
+                    "materie": "Chimie", 
+                    "tip_ora": "curs",
+                    "sala": "DP12", 
+                    "profesor": "Rosu Ana-Maria"
+                 },
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            }
+        },
+        "saptamana_para": {
+            "Luni": {
+                "9": {
+                    "materie": "Analiza matematica",
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Marcelina  Cristina Mocanu"
+                },
+                "10": {
+                    "materie": "Analiza matematica",
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Marcelina  Cristina Mocanu"
+                },
+                "11": {
+                    "materie": "Algebra liniara",
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Lungu Otilia"
+                },
+                "12": {
+                    "materie": "Algebra liniara",
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Lungu Otilia"
+                },
+                "13": null, 
+                "14": null,
+                "15": null, 
+                "16": null,
+                "17": null, 
+                "18": null,
+                "19": null
+            },
+            "Marti": {
+                 "9": {
+                    "materie": "Chimie (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP6", 
+                    "profesor": "Muntianu Gabriela"
+                 },
+                 "10": {
+                    "materie": "Chimie (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP6", 
+                    "profesor": "Muntianu Gabriela"
+                 },
+                 "11": {
+                    "materie": "Protectia mediului",
+                    "tip_ora": "seminar",
+                    "sala": "AP4",
+                    "profesor": "Nedeff Valentin"
+                 },
+                 "12": {
+                    "materie": "Protectia mediului",
+                    "tip_ora": "seminar",
+                    "sala": "AP4",
+                    "profesor": "Nedeff Valentin"
+                 },
+                 "13": {
+                    "materie": "Engleza tehnica 1",
+                    "tip_ora": "seminar",
+                    "sala": "AP4",
+                    "profesor": "Andrioai Gabriela"
+                 },
+                 "14": {
+                    "materie": "Engleza tehnica 1",
+                    "tip_ora": "seminar",
+                    "sala": "AP4",
+                    "profesor": "Andrioai Gabriela"
+                 },
+                "15": {
+                    "materie": "Comunicare",
+                    "tip_ora": "seminar",
+                    "sala": "AP4",
+                    "profesor": "Cotirlet Paul-Claudiu"
+                },
+                "16": {
+                    "materie": "Comunicare",
+                    "tip_ora": "seminar",
+                    "sala": "AP4",
+                    "profesor": "Cotirlet Paul-Claudiu"
+                },
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Miercuri": {
+                 "9": {
+                    "materie": "Analiza matematica", 
+                    "tip_ora": "seminar",
+                    "sala": "AP4",
+                    "profesor": "Ardeleanu Elena Roxana "
+                 },
+                 "10": {
+                    "materie": "Analiza matematica", 
+                    "tip_ora": "seminar",
+                    "sala": "AP4",
+                    "profesor": "Ardeleanu Elena Roxana "
+                 },
+                 "11": {
+                    "materie": "Algebra liniara", 
+                    "tip_ora": "seminar",
+                    "sala": "AP4",
+                    "profesor": "Lungu Otilia"
+                 },
+                 "12": {
+                    "materie": "Algebra liniara", 
+                    "tip_ora": "seminar",
+                    "sala": "AP4",
+                    "profesor": "Lungu Otilia"
+                 },
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Joi": {
+                "9": {
+                    "materie": "Programarea calculatoarelor si limbaje de programare 1", 
+                    "tip_ora": "curs",
+                    "sala": "DP11", 
+                    "profesor": "Olaru Ionel"
+                 },
+                 "10": {
+                    "materie": "Programarea calculatoarelor si limbaje de programare 1", 
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Olaru Ionel"
+                 },
+                 "11": null,
+                 "12": null,
+                "13": {
+                    "materie": "Comunicare", 
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Cotirlet Paul-Claudiu"
+                 },
+                 "14": {
+                    "materie": "Comunicare", 
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Cotirlet Paul-Claudiu"
+                 },
+                 "15": {
+                    "materie": "Protectia mediului", 
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Panainte Lehadus-Mirela"
+                 },
+                 "16": {
+                    "materie": "Protectia mediului", 
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Panainte Lehadus-Mirela"
+                 },
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Vineri": {
+                "9": {
+                    "materie": "Programarea calculatoarelor si limbaje de programare 1 (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP4", 
+                    "profesor": "Olaru Ionel"
+                },
+                "10": {
+                    "materie": "Programarea calculatoarelor si limbaje de programare 1 (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP4", 
+                    "profesor": "Olaru Ionel"
+                },
+                 "11": {
+                     "materie": "Chimie",
+                     "tip_ora": "curs",
+                     "sala": "DP12", 
+                     "profesor": "Rosu Ana-Maria"
+                  },
+                  "12": {
+                     "materie": "Chimie",
+                     "tip_ora": "curs",
+                     "sala": "DP12", 
+                     "profesor": "Rosu Ana-Maria"
+                  },
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            }
+        }
+    },
+    "1221": {
+        "saptamana_impara": {
+            "Luni": {
+                "9": {
+                    "materie": "Electrotehnica",
+                    "tip_ora": "curs",
+                    "sala": "DP17",
+                    "profesor": "Banu Ioan-Viorel"
+                },
+                "10": {
+                    "materie": "Electrotehnica",
+                    "tip_ora": "curs",
+                    "sala": "DP17",
+                    "profesor": "Banu Ioan-Viorel"
+                },
+                "11": {
+                    "materie": "Electrotehnica (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP11", 
+                    "profesor": "Banu Ioan-Viorel"
+                },
+                "12": {
+                    "materie": "Electrotehnica (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP11", 
+                    "profesor": "Banu Ioan-Viorel"
+                },
+                "13": null,
+                "14": null,
+                "15": {
+                    "materie": "Electronica digitală (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP6", 
+                    "profesor": "Nedeterminat"
+                 },
+                 "16": {
+                    "materie": "Electronica digitală (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP6", 
+                    "profesor": "Nedeterminat"
+                 },
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Marti": {
+                "9": {
+                    "materie": "Rețele locale de calculatoare",
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Culea George"
+                },
+                "10": {
+                    "materie": "Rețele locale de calculatoare",
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Culea George"
+                },
+                "11": {
+                    "materie": "Proiectarea algoritmilor",
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Gloria Cerasela-Crisan"
+                },
+                "12": {
+                    "materie": "Proiectarea algoritmilor",
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Gloria Cerasela-Crisan"
+                },
+                "13": {
+                    "materie": "Retele locale de calculatoare (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP4", 
+                    "profesor": "Culea George"
+                },
+                "14": {
+                    "materie": "Retele locale de calculatoare (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP4", 
+                    "profesor": "Culea George"
+                },
+                "15": {
+                    "materie": "Proiectarea algoritmilor (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP4", 
+                    "profesor": "Gloria Cerasela-Crisan"
+                },
+                "16": {
+                    "materie": "Proiectarea algoritmilor (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP4", 
+                    "profesor": "Gloria Cerasela-Crisan"
+                },
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Miercuri": {
+                "9": {
+                    "materie": "Programare logica si functionala",
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Popa Dan"
+                },
+                "10": {
+                    "materie": "Programare logica si functionala",
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Popa Dan"
+                },
+                "11": {
+                    "materie": "Programare logica si functionala (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP11", 
+                    "profesor": "Popa Dan"
+                },
+                "12": {
+                    "materie": "Programare logica si functionala (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP11", 
+                    "profesor": "Popa Dan"
+                },
+                 "13": {
+                    "materie": "Electronica digitală", 
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Rotar Dan"
+                 },
+                 "14": {
+                    "materie": "Electronica digitală", 
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Rotar Dan"
+                 },
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Joi": {
+                "9": {
+                    "materie": "Grafica asistata de calculator 2",
+                    "tip_ora": "proiect",
+                    "sala": "AP19", 
+                    "profesor": "Nedeterminat"
+                 },
+                 "10": {
+                    "materie": "Grafica asistata de calculator 2",
+                    "tip_ora": "proiect",
+                    "sala": "AP19", 
+                    "profesor": "Nedeterminat"
+                 },
+                 "11": null,
+                 "12": null,
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Vineri": {
+                "9": {
+                    "materie": "Educatie fizica si sport 3",
+                    "tip_ora": "seminar",
+                    "sala": "AP11", 
+                    "profesor": "Dragoi Cristian-Corneliu"
+                },
+                "10": {
+                    "materie": "Educatie fizica si sport 3",
+                    "tip_ora": "seminar",
+                    "sala": "AP11", 
+                    "profesor": "Dragoi Cristian-Corneliu"
+                },
+                "11": null,
+                "12": null,
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            }
+        },
+        "saptamana_para": {
+            "Luni": {
+                "9": {
+                    "materie": "Electrotehnica",
+                    "tip_ora": "curs",
+                    "sala": "DP18",
+                    "profesor": "Banu Ioan-Viorel"
+                },
+                "10": {
+                    "materie": "Electrotehnica",
+                    "tip_ora": "curs",
+                    "sala": "DP18",
+                    "profesor": "Banu Ioan-Viorel"
+                },
+                "11": {
+                    "materie": "Electrotehnica (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP11", 
+                    "profesor": "Banu Ioan-Viorel"
+                },
+                "12": {
+                    "materie": "Electrotehnica (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP11", 
+                    "profesor": "Banu Ioan-Viorel"
+                },
+                 "13": null,
+                 "14": null,
+                 "15": {
+                    "materie": "Electronica digitală (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP6", 
+                    "profesor": "Nedeterminat"
+                 },
+                 "16": {
+                    "materie": "Electronica digitală (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP6", 
+                    "profesor": "Nedeterminat"
+                 },
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Marti": {
+                "9": {
+                    "materie": "Rețele locale de calculatoare",
+                    "tip_ora": "curs",
+                    "sala": "DP17",
+                    "profesor": "Culea George"
+                },
+                "10": {
+                    "materie": "Rețele locale de calculatoare",
+                    "tip_ora": "curs",
+                    "sala": "DP17",
+                    "profesor": "Culea George"
+                },
+                "11": {
+                    "materie": "Proiectarea algoritmilor",
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Gloria Cerasela-Crisan"
+                },
+                "12": {
+                    "materie": "Proiectarea algoritmilor",
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Gloria Cerasela-Crisan"
+                },
+                "13": {
+                    "materie": "Retele locale de calculatoare (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP4", 
+                    "profesor": "Culea George"
+                },
+                "14": {
+                    "materie": "Retele locale de calculatoare (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP4", 
+                    "profesor": "Culea George"
+                },
+                "15": {
+                    "materie": "Proiectarea algoritmilor (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP4", 
+                    "profesor": "Gloria Cerasela-Crisan"
+                },
+                "16": {
+                    "materie": "Proiectarea algoritmilor (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP4", 
+                    "profesor": "Gloria Cerasela-Crisan"
+                },
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Miercuri": {
+                "9": {
+                    "materie": "Programare logica si functionala",
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Popa Dan"
+                },
+                "10": {
+                    "materie": "Programare logica si functionala",
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Popa Dan"
+                },
+                "11": {
+                    "materie": "Programare logica si functionala (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP11", 
+                    "profesor": "Popa Dan"
+                },
+                "12": {
+                    "materie": "Programare logica si functionala (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP11", 
+                    "profesor": "Popa Dan"
+                },
+                "13": {
+                    "materie": "Electronica digitală", 
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Rotar Dan"
+                 },
+                 "14": {
+                    "materie": "Electronica digitală", 
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Rotar Dan"
+                 },
+                "15": null, 
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Joi": {
+                "9": {
+                    "materie": "Grafica asistata de calculator 2",
+                    "tip_ora": "proiect",
+                    "sala": "AP19", 
+                    "profesor": "Nedeterminat"
+                 },
+                 "10": {
+                    "materie": "Grafica asistata de calculator 2",
+                    "tip_ora": "proiect",
+                    "sala": "AP19", 
+                    "profesor": "Nedeterminat"
+                 },
+                 "11": null,
+                 "12": null,
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Vineri": {
+                "9": {
+                    "materie": "Educatie fizica si sport 3",
+                    "tip_ora": "seminar",
+                    "sala": "AP11", 
+                    "profesor": "Dragoi Cristian-Corneliu"
+                },
+                "10": {
+                    "materie": "Educatie fizica si sport 3",
+                    "tip_ora": "seminar",
+                    "sala": "AP11", 
+                    "profesor": "Dragoi Cristian-Corneliu"
+                },
+                "11": {
+                    "materie": "Electronica digitală", 
+                    "tip_ora": "seminar",
+                    "sala": "AP11",
+                    "profesor": "Popa Sorin"
+                 },
+                 "12": {
+                    "materie": "Electronica digitală", 
+                    "tip_ora": "seminar",
+                    "sala": "AP11",
+                    "profesor": "Popa Sorin"
+                 },
+                "13": {
+                    "materie": "Engleza tehnica 3",
+                    "tip_ora": "seminar",
+                    "sala": "AP4",
+                    "profesor": "Andrioai Gabriela"
+                 },
+                 "14": {
+                    "materie": "Engleza tehnica 3",
+                    "tip_ora": "seminar",
+                    "sala": "AP4",
+                    "profesor": "Andrioai Gabriela"
+                 },
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            }
+        }
+    },
+    "1231": {
+        "saptamana_impara": {
+            "Luni": {
+                "9": {
+                    "materie": "Sisteme de Operare",
+                    "tip_ora": "curs",
+                    "sala": "B11",
+                    "profesor": "Popa Dan"
+                },
+                "10": {
+                    "materie": "Sisteme de Operare",
+                    "tip_ora": "curs",
+                    "sala": "B11",
+                    "profesor": "Popa Dan"
+                },
+                "11": {
+                    "materie": "Sisteme de Operare (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP20", 
+                    "profesor": "Nedeterminat"
+                },
+                "12": {
+                    "materie": "Sisteme de Operare (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP20", 
+                    "profesor": "Nedeterminat"
+                },
+                "13": null,
+                "14": null,
+                "15": {
+                    "materie": "Baze de date (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP19", 
+                    "profesor": "Gloria Cerasela-Crisan"
+                },
+                "16": {
+                    "materie": "Baze de date (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP19", 
+                    "profesor": "Gloria Cerasela-Crisan"
+                },
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Marti": {
+                "9": {
+                    "materie": "Inginerie software",
+                    "tip_ora": "curs",
+                    "sala": "DP17",
+                    "profesor": "Popa Sorin"
+                },
+                "10": {
+                    "materie": "Inginerie software",
+                    "tip_ora": "curs",
+                    "sala": "DP17",
+                    "profesor": "Popa Sorin"
+                },
+                "11": null,
+                "12": null,
+                "13": {
+                    "materie": "Interactiunea Om-Calculator (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP11", 
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "14": {
+                    "materie": "Interactiunea Om-Calculator (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP11", 
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Miercuri": {
+                "9": {
+                    "materie": "Baze de date", 
+                    "tip_ora": "curs",
+                    "sala": "DP17",
+                    "profesor": "Gloria Cerasela-Crisan"
+                 },
+                 "10": {
+                    "materie": "Baze de date", 
+                    "tip_ora": "curs",
+                    "sala": "DP17",
+                    "profesor": "Gloria Cerasela-Crisan"
+                 },
+                 "11": null,
+                 "12": null,
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Joi": {
+                "9": {
+                    "materie": "Proiectare cu microprocesoare",
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Popescu Cornel"
+                },
+                "10": {
+                    "materie": "Proiectare cu microprocesoare",
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Popescu Cornel"
+                },
+                "11": {
+                    "materie": "Proiectare cu microprocesoare (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP6", 
+                    "profesor": "Popescu Cornel"
+                },
+                "12": {
+                    "materie": "Proiectare cu microprocesoare (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP6", 
+                    "profesor": "Popescu Cornel"
+                },
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Vineri": {
+                "9": {
+                    "materie": "Interactiunea Om-Calculator", 
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Pruteanu Eusebiu"
+                 },
+                 "10": {
+                    "materie": "Interactiunea Om-Calculator", 
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Pruteanu Eusebiu"
+                 },
+                 "11": null,
+                 "12": null,
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            }
+        },
+        "saptamana_para": {
+            "Luni": {
+                "9": {
+                    "materie": "Sisteme de Operare",
+                    "tip_ora": "curs",
+                    "sala": "B122",
+                    "profesor": "Popa Dan"
+                },
+                "10": {
+                    "materie": "Sisteme de Operare",
+                    "tip_ora": "curs",
+                    "sala": "B122",
+                    "profesor": "Popa Dan"
+                },
+                "11": {
+                    "materie": "Sisteme de Operare (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP20", 
+                    "profesor": "Nedeterminat"
+                },
+                "12": {
+                    "materie": "Sisteme de Operare (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP20", 
+                    "profesor": "Nedeterminat"
+                },
+                 "13": null,
+                 "14": null,
+                 "15": {
+                    "materie": "Baze de date (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP19", 
+                    "profesor": "Gloria Cerasela-Crisan"
+                 },
+                 "16": {
+                    "materie": "Baze de date (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP19", 
+                    "profesor": "Gloria Cerasela-Crisan"
+                 },
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Marti": {
+                "9": {
+                    "materie": "Inginerie software",
+                    "tip_ora": "proiect",
+                    "sala": "AP19",
+                    "profesor": "Popa Sorin"
+                },
+                "10": {
+                    "materie": "Inginerie software",
+                    "tip_ora": "proiect",
+                    "sala": "AP19",
+                    "profesor": "Popa Sorin"
+                },
+                 "11": {
+                     "materie": "Inginerie software",
+                     "tip_ora": "curs",
+                     "sala": "DP18",
+                     "profesor": "Popa Sorin"
+                  },
+                  "12": {
+                     "materie": "Inginerie software",
+                     "tip_ora": "curs",
+                     "sala": "DP18",
+                     "profesor": "Popa Sorin"
+                  },
+                "13": {
+                    "materie": "Interactiunea Om-Calculator (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP11", 
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "14": {
+                    "materie": "Interactiunea Om-Calculator (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP11", 
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Miercuri": {
+                "9": {
+                    "materie": "Baze de date", 
+                    "tip_ora": "curs",
+                    "sala": "DP18",
+                    "profesor": "Gloria Cerasela-Crisan"
+                 },
+                 "10": {
+                    "materie": "Baze de date", 
+                    "tip_ora": "curs",
+                    "sala": "DP18",
+                    "profesor": "Gloria Cerasela-Crisan"
+                 },
+                 "11": null,
+                 "12": null,
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Joi": {
+                "9": {
+                    "materie": "Proiectare cu microprocesoare",
+                    "tip_ora": "curs",
+                    "sala": "DP18",
+                    "profesor": "Popescu Cornel"
+                },
+                "10": {
+                    "materie": "Proiectare cu microprocesoare",
+                    "tip_ora": "curs",
+                    "sala": "DP18",
+                    "profesor": "Popescu Cornel"
+                },
+                "11": {
+                    "materie": "Proiectare cu microprocesoare (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP6", 
+                    "profesor": "Popescu Cornel"
+                },
+                "12": {
+                    "materie": "Proiectare cu microprocesoare (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP6", 
+                    "profesor": "Popescu Cornel"
+                },
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Vineri": {
+                "9": {
+                    "materie": "Interactiunea Om-Calculator", 
+                    "tip_ora": "curs",
+                    "sala": "DP18",
+                    "profesor": "Pruteanu Eusebiu"
+                 },
+                 "10": {
+                    "materie": "Interactiunea Om-Calculator", 
+                    "tip_ora": "curs",
+                    "sala": "DP18",
+                    "profesor": "Pruteanu Eusebiu"
+                 },
+                 "11": null,
+                 "12": null,
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            }
+        }
+    },
+    "1241": {
+        "saptamana_impara": {
+            "Luni": {
+                "9": {
+                    "materie": "Sisteme Inteligente",
+                    "tip_ora": "curs",
+                    "sala": "B128",
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "10": {
+                    "materie": "Sisteme Inteligente",
+                    "tip_ora": "curs",
+                    "sala": "B128",
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "11": {
+                    "materie": "Sisteme Inteligente (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP22", 
+                    "profesor": "Popa Sorin"
+                },
+                "12": {
+                    "materie": "Sisteme Inteligente (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP22", 
+                    "profesor": "Popa Sorin"
+                },
+                "13": {
+                    "materie": "Programare Web",
+                    "tip_ora": "curs",
+                    "sala": "B11",
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "14": {
+                    "materie": "Programare Web",
+                    "tip_ora": "curs",
+                    "sala": "B11",
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "15": {
+                    "materie": "Programare Web (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP20", 
+                    "profesor": "Sghera Bogdan"
+                },
+                "16": {
+                    "materie": "Programare Web (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP20", 
+                    "profesor": "Sghera Bogdan"
+                },
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Marti": {
+                "9": {
+                    "materie": "Sisteme Distribuite",
+                    "tip_ora": "curs",
+                    "sala": "B11",
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "10": {
+                    "materie": "Sisteme Distribuite",
+                    "tip_ora": "curs",
+                    "sala": "B11",
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "11": {
+                    "materie": "Sisteme Distribuite (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP20", 
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "12": {
+                    "materie": "Sisteme Distribuite (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP20", 
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "13": {
+                    "materie": "Informatica Industriala",
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Culea George"
+                },
+                "14": {
+                    "materie": "Informatica Industriala",
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Culea George"
+                },
+                "15": {
+                    "materie": "Informatica Industriala (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP11", 
+                    "profesor": "Culea George"
+                },
+                "16": {
+                    "materie": "Informatica Industriala (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP11", 
+                    "profesor": "Culea George"
+                },
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Miercuri": {
+                 "9": null, 
+                 "10": null,
+                "11": {
+                    "materie": "Sisteme Tolerante la Defecte (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP19", 
+                    "profesor": "Enachi Andrei"
+                },
+                "12": {
+                    "materie": "Sisteme Tolerante la Defecte (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP19", 
+                    "profesor": "Enachi Andrei"
+                },
+                "13": null, 
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Joi": {
+                "9": {
+                    "materie": "Instrumente Pentru Dezvoltarea Programelor (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP6", 
+                    "profesor": "Furdu Iulian"
+                },
+                "10": {
+                    "materie": "Instrumente Pentru Dezvoltarea Programelor (Semigrupa B)",
+                    "tip_ora": "laborator",
+                    "sala": "AP6", 
+                    "profesor": "Furdu Iulian"
+                },
+                "11": null,
+                "12": null,
+                 "13": {
+                    "materie": "Sisteme Tolerante la Defecte",
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Popescu Cornel"
+                 },
+                 "14": {
+                    "materie": "Sisteme Tolerante la Defecte",
+                    "tip_ora": "curs",
+                    "sala": "DP12",
+                    "profesor": "Popescu Cornel"
+                 },
+                 "15": {
+                     "materie": "Instrumente Pentru Dezvoltarea Programelor",
+                     "tip_ora": "curs",
+                     "sala": "DP12",
+                     "profesor": "Popa Dan"
+                  },
+                  "16": {
+                     "materie": "Instrumente Pentru Dezvoltarea Programelor",
+                     "tip_ora": "curs",
+                     "sala": "DP12",
+                     "profesor": "Popa Dan"
+                  },
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Vineri": {
+                "9": {
+                    "materie": "Proiectare software",
+                    "tip_ora": "proiect",
+                    "sala": "AP19", 
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "10": {
+                    "materie": "Proiectare software",
+                    "tip_ora": "proiect",
+                    "sala": "AP19", 
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "11": null,
+                "12": null,
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            }
+        },
+        "saptamana_para": {
+            "Luni": {
+                "9": {
+                    "materie": "Sisteme Inteligente",
+                    "tip_ora": "curs",
+                    "sala": "B130",
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "10": {
+                    "materie": "Sisteme Inteligente",
+                    "tip_ora": "curs",
+                    "sala": "B130",
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "11": {
+                    "materie": "Sisteme Inteligente (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP22", 
+                    "profesor": "Popa Sorin"
+                },
+                "12": {
+                    "materie": "Sisteme Inteligente (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP22", 
+                    "profesor": "Popa Sorin"
+                },
+                "13": {
+                    "materie": "Programare Web",
+                    "tip_ora": "curs",
+                    "sala": "B122",
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "14": {
+                    "materie": "Programare Web",
+                    "tip_ora": "curs",
+                    "sala": "B122",
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "15": {
+                    "materie": "Programare Web (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP20", 
+                    "profesor": "Sghera Bogdan"
+                },
+                "16": {
+                    "materie": "Programare Web (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP20", 
+                    "profesor": "Sghera Bogdan"
+                },
+                "17": null, 
+                "18": null,
+                "19": null
+            },
+            "Marti": {
+                "9": {
+                    "materie": "Sisteme Distribuite",
+                    "tip_ora": "curs",
+                    "sala": "B122",
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "10": {
+                    "materie": "Sisteme Distribuite",
+                    "tip_ora": "curs",
+                    "sala": "B122",
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "11": {
+                    "materie": "Sisteme Distribuite (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP20", 
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "12": {
+                    "materie": "Sisteme Distribuite (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP20", 
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "13": {
+                    "materie": "Informatica Industriala",
+                    "tip_ora": "curs",
+                    "sala": "DP17",
+                    "profesor": "Culea George"
+                },
+                "14": {
+                    "materie": "Informatica Industriala",
+                    "tip_ora": "curs",
+                    "sala": "DP17",
+                    "profesor": "Culea George"
+                },
+                "15": {
+                    "materie": "Informatica Industriala (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP11", 
+                    "profesor": "Culea George"
+                },
+                "16": {
+                    "materie": "Informatica Industriala (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP11", 
+                    "profesor": "Culea George"
+                },
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Miercuri": {
+                 "9": null, 
+                 "10": null,
+                "11": {
+                    "materie": "Sisteme Tolerante la Defecte (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP19", 
+                    "profesor": "Enachi Andrei"
+                },
+                "12": {
+                    "materie": "Sisteme Tolerante la Defecte (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP19", 
+                    "profesor": "Enachi Andrei"
+                },
+                "13": null, 
+                "14": null,
+                "15": null, 
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Joi": {
+                "9": {
+                    "materie": "Instrumente Pentru Dezvoltarea Programelor (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP6", 
+                    "profesor": "Furdu Iulian"
+                },
+                "10": {
+                    "materie": "Instrumente Pentru Dezvoltarea Programelor (Semigrupa A)",
+                    "tip_ora": "laborator",
+                    "sala": "AP6", 
+                    "profesor": "Furdu Iulian"
+                },
+                "11": null,
+                "12": null,
+                 "13": {
+                    "materie": "Sisteme Tolerante la Defecte",
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Popescu Cornel"
+                 },
+                 "14": {
+                    "materie": "Sisteme Tolerante la Defecte",
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Popescu Cornel"
+                 },
+                 "15": {
+                     "materie": "Instrumente Pentru Dezvoltarea Programelor",
+                     "tip_ora": "curs",
+                     "sala": "DP11",
+                     "profesor": "Popa Dan"
+                  },
+                  "16": {
+                     "materie": "Instrumente Pentru Dezvoltarea Programelor",
+                     "tip_ora": "curs",
+                     "sala": "DP11",
+                     "profesor": "Popa Dan"
+                  },
+                "17": null,
+                "18": null,
+                "19": null
+            },
+            "Vineri": {
+                "9": {
+                    "materie": "Proiectare software",
+                    "tip_ora": "proiect",
+                    "sala": "AP19", 
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "10": {
+                    "materie": "Proiectare software",
+                    "tip_ora": "proiect",
+                    "sala": "AP19", 
+                    "profesor": "Pruteanu Eusebiu"
+                },
+                "11": null,
+                "12": null,
+                 "13": {
+                    "materie": "Fiabilitate Software", 
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Bibire Luminita"
+                 },
+                 "14": {
+                    "materie": "Fiabilitate Software", 
+                    "tip_ora": "curs",
+                    "sala": "DP11",
+                    "profesor": "Bibire Luminita"
+                 },
+                 "15": {
+                    "materie": "Fiabilitate Software",
+                    "tip_ora": "seminar",
+                    "sala": "AP6",
+                    "profesor": "Grigore Roxana"
+                 },
+                 "16": {
+                    "materie": "Fiabilitate Software",
+                    "tip_ora": "seminar",
+                    "sala": "AP6",
+                    "profesor": "Grigore Roxana"
+                 },
+                "17": null,
+                "18": null,
+                "19": null
+            }
+        }
+    }
+}

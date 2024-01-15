@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | ClassCoord</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/navbar.css')}}"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/contact.css')}}"/>
+
+    <script src="https://cdn.ckeditor.com/4.25.1-lts/full-all/ckeditor.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="header-left">
+                <h1><span class="logo">ClassCoord</span></h1>
+            </div>
+            <div class="header-right">
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="/">Acasă</a></li>
+                        <li><a href="/orar_grupe">Orar Grupe</a></li>
+                        <li><a href="/orar_profesori">Orar Profesori</a></li>
+                        <li><a href="/orar_sali">Orar Săli</a></li>
+                        <li><a href="/contact" class="active">Contact</a></li>
+                        <li><a href="/despre">Despre Noi</a></li>
+                    </ul>
+                    <div class="hamburger-menu">&#9776;</div>
+                </nav>
+                <a href="/login" class="login-btn">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>Contactați-ne</h2>
+                <p>Avem plăcerea să vă răspundem la întrebări și să primim feedback-ul dumneavoastră</p>
+            </div>
+
+            <form id="emailForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nume:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="to">Adresa de email:</label>
+                    <input type="email" id="to" name="to" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subiect:</label>
+                    <input type="text" id="subject" name="subject" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailEditor">Mesaj:</label>
+                    <textarea id="emailEditor" name="emailEditor" class="form-control"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Trimite Mesaj</button>
+            </form>
+
+            <div class="contact-info-cards">
+                <div class="contact-info-item">
+                    <div class="icon">✉️</div>
+                    <h4>Email</h4>
+                    <p>classcord@gmail.com</p>
+                </div>
+
+                <div class="contact-info-item">
+                    <div class="icon">📞</div>
+                    <h4>Telefon</h4>
+                    <p>0750419007</p>
+                </div>
+
+                <div class="contact-info-item">
+                    <div class="icon">📍</div>
+                    <h4>Adresă</h4>
+                    <p>Calea Mărășești 157, Bacău</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>Email: classcord@gmail.com</p>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2024 ClassCord. Toate drepturile rezervate.</p>
+        </div>
+
+        <div class="branding">
+            <img src="https://i.ibb.co/1ZTTcYZ/CLASSCOORD.png" alt="CLASSCOORD">
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.10/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            CKEDITOR.replace('emailEditor', {
+                toolbar: [
+                    { name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'Strike'] },
+                    { name: 'paragraph', items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'] },
+                    { name: 'links', items: ['Link', 'Unlink'] },
+                    { name: 'styles', items: ['Format', 'FontSize'] },
+                    { name: 'colors', items: ['TextColor', 'BGColor'] }
+                ],
+                height: 180
+            });
+
+            document.querySelector('.hamburger-menu').addEventListener('click', function() {
+                document.querySelector('.nav-list').classList.toggle('active');
+            });
+
+            document.getElementById('emailForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                alert('Mesajul a fost trimis! Vă mulțumim pentru feedback.');
+                this.reset();
+                CKEDITOR.instances.emailEditor.setData('');
+            });
+        });
+    </script>
+</body>
+</html>
