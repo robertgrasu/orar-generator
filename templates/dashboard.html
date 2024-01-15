@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+           <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dashboard-adm.css')}}"/>
+
+
+</head>
+<body>
+<header>
+    <div class="nav">
+        <div class="header-left">
+            <h1><span class="logo">ClassCoord</span></h1>
+        </div>
+        <div class="header-right">
+            <nav>
+                <ul class="nav-list">
+                     <li><a href="/" class="active">Acasă</a>
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownOrar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Gestionare Orare
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownOrar">
+                            <li><a class="dropdown-item" href="/orar_grupe_admin">Orar Grupe</a></li>
+                            <li><a class="dropdown-item" href="/orar_profesori_admin">Orar Profesori</a></li>
+                            <li><a class="dropdown-item" href="/orar_sali_admin">Orar Săli</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAdauga" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Gestionare date
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownAdauga">
+                        <li><a class="dropdown-item" href="/formular_adauga_sala">Adaugă Săli</a></li>
+                        <li><a class="dropdown-item" href="/formular_adauga_materii">Adaugă Materii</a></li>
+                        <li><a class="dropdown-item" href="/formular_adauga_departament">Adaugă Departamente</a></li>
+                        <li><a class="dropdown-item" href="/formular_adauga_grupe">Adaugă Grupe</a></li>
+                        <li><a class="dropdown-item" href="/formular_adauga_profesori">Adaugă Profesori</a></li>
+                    </ul>
+                </li>
+
+                    <li><a href="/admin_register">Creare utilizatori</a></li>
+                </ul>
+<!--                <div class="hamburger-menu">&#9776;</div>-->
+            </nav>
+            <a href="/logout" class="login-btn">Logout</a>
+        </div>
+    </div>
+</header>
+
+
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/navbar-admin.js') }}"></script>
+
+</body>
+</html>

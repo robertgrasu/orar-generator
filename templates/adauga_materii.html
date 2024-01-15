@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionare Materii | ClassCoord</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.bootstrap4.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/navbar-admin2.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/adauga_materii.css')}}"/>
+</head>
+
+<body class="bg-light">
+<header>
+    <div class="nav">
+        <div class="header-left">
+            <h1><span class="logo">ClassCoord</span></h1>
+        </div>
+        <div class="header-right">
+            <nav>
+                <ul class="nav-list">
+                     <li><a href="/" class="active">Acasă</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownOrar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Gestionare Orare
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownOrar">
+                            <li><a class="dropdown-item" href="/orar_grupe_admin">Orar Grupe</a></li>
+                            <li><a class="dropdown-item" href="/orar_profesori_admin">Orar Profesori</a></li>
+                            <li><a class="dropdown-item" href="/orar_sali_admin">Orar Săli</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAdauga" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Gestionare date
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownAdauga">
+                            <li><a class="dropdown-item" href="/formular_adauga_sala">Adaugă Săli</a></li>
+                            <li><a class="dropdown-item" href="/formular_adauga_materii">Adaugă Materii</a></li>
+                            <li><a class="dropdown-item" href="/formular_adauga_departament">Adaugă Departamente</a></li>
+                            <li><a class="dropdown-item" href="/formular_adauga_grupe">Adaugă Grupe</a></li>
+                            <li><a class="dropdown-item" href="/formular_adauga_profesori">Adaugă Profesori</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/admin_register">Creare utilizatori</a></li>
+                </ul>
+            </nav>
+            <a href="/logout" class="login-btn">Logout</a>
+        </div>
+    </div>
+</header>
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Partea stângă: Tabelul cu materiile existente -->
+        <div class="col-md-9">
+            <h2>Materii Existente</h2>
+            <div id="listaMaterii">
+                <!-- Tabelul cu materiile va fi aici -->
+            </div>
+            <nav aria-label="Navigare pagini materii">
+                <ul class="pagination">
+                    <!-- Butoanele de paginare aici -->
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Partea dreaptă: Formularul pentru adăugarea materiei -->
+        <div class="col-md-3">
+            <h3>Adaugă Materie Nouă</h3>
+            <form id="formAdaugaMaterie">
+                <div class="mb-3">
+                    <label for="numeMaterie" class="form-label">Nume Materie:</label>
+                    <input type="text" id="numeMaterie" class="form-control" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Tipuri de Ore (pe săptămână):</label>
+                    
+                    <!-- Curs -->
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="tipOreCurs">
+                        <label class="form-check-label" for="tipOreCurs">Curs</label>
+                        <input type="number" id="nrOreCurs" class="form-control mt-2" style="display: none;" placeholder="Nr. ore">
+                        <div id="containerProfesorCursSelectize" class="mt-2" style="display: none;">
+                            <label for="profesorCursSelectize" class="form-label">Profesor Curs:</label>
+                            <div id="profesorCursSelectize"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Laborator -->
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="tipOreLaborator">
+                        <label class="form-check-label" for="tipOreLaborator">Laborator</label>
+                        <input type="number" id="nrOreLaborator" class="form-control mt-2" style="display: none;" placeholder="Nr. ore">
+                        <div id="containerProfesorLaboratorSelectize" class="mt-2" style="display: none;">
+                            <label for="profesorLaboratorSelectize" class="form-label">Profesor Laborator:</label>
+                            <div id="profesorLaboratorSelectize"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Seminar -->
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="tipOreSeminar">
+                        <label class="form-check-label" for="tipOreSeminar">Seminar</label>
+                        <input type="number" id="nrOreSeminar" class="form-control mt-2" style="display: none;" placeholder="Nr. ore">
+                        <div id="containerProfesorSeminarSelectize" class="mt-2" style="display: none;">
+                            <label for="profesorSeminarSelectize" class="form-label">Profesor Seminar:</label>
+                            <div id="profesorSeminarSelectize"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Proiect -->
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="tipOreProiect">
+                        <label class="form-check-label" for="tipOreProiect">Proiect</label>
+                        <input type="number" id="nrOreProiect" class="form-control mt-2" style="display: none;" placeholder="Nr. ore">
+                        <div id="containerProfesorProiectSelectize" class="mt-2" style="display: none;">
+                            <label for="profesorProiectSelectize" class="form-label">Profesor Proiect:</label>
+                            <div id="profesorProiectSelectize"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="grupaSelectize" class="form-label">Alege Grupa:</label>
+                    <div id="grupaSelectize"></div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="anSelect" class="form-label">Alege Anul:</label>
+                    <select id="anSelect" class="form-select">
+                        <option value="I">Anul I</option>
+                        <option value="II">Anul II</option>
+                        <option value="III">Anul III</option>
+                        <option value="IV">Anul IV</option>
+                    </select>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="semestruSelect" class="form-label">Alege Semestrul:</label>
+                    <select id="semestruSelect" class="form-select">
+                        <option value="I">Semestrul I</option>
+                        <option value="II">Semestrul II</option>
+                    </select>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="codMaterie" class="form-label">Cod Prescurtat:</label>
+                    <input type="text" id="codMaterie" class="form-control">
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-12 mb-2">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-plus-circle me-2"></i>Adaugă Materie
+                        </button>
+                    </div>
+                    <div class="col-12">
+                        <button type="reset" class="btn btn-secondary">
+                            <i class="bi bi-arrow-counterclockwise me-2"></i>Resetează
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal pentru editarea unei materii -->
+<div class="modal fade" id="modalEditareMaterie" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Editează Materie</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formEditareMaterie">
+                    <input type="hidden" id="edit_id_materie">
+
+                    <div class="mb-3">
+                        <label for="edit_numeMaterie" class="form-label">Nume Materie:</label>
+                        <input type="text" id="edit_numeMaterie" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Tipuri de Ore (pe săptămână):</label>
+                        
+                        <!-- Curs -->
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="edit_tipOreCurs">
+                            <label class="form-check-label" for="edit_tipOreCurs">Curs</label>
+                            <input type="number" id="edit_nrOreCurs" class="form-control mt-2" style="display: none;" placeholder="Nr. ore">
+                            <div id="containerEditProfesorCursSelectize" class="mt-2" style="display: none;">
+                                <label for="edit_profesorCursSelectize" class="form-label">Profesor Curs:</label>
+                                <div id="edit_profesorCursSelectize"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Laborator -->
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="edit_tipOreLaborator">
+                            <label class="form-check-label" for="edit_tipOreLaborator">Laborator</label>
+                            <input type="number" id="edit_nrOreLaborator" class="form-control mt-2" style="display: none;" placeholder="Nr. ore">
+                            <div id="containerEditProfesorLaboratorSelectize" class="mt-2" style="display: none;">
+                                <label for="edit_profesorLaboratorSelectize" class="form-label">Profesor Laborator:</label>
+                                <div id="edit_profesorLaboratorSelectize"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Seminar -->
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="edit_tipOreSeminar">
+                            <label class="form-check-label" for="edit_tipOreSeminar">Seminar</label>
+                            <input type="number" id="edit_nrOreSeminar" class="form-control mt-2" style="display: none;" placeholder="Nr. ore">
+                            <div id="containerEditProfesorSeminarSelectize" class="mt-2" style="display: none;">
+                                <label for="edit_profesorSeminarSelectize" class="form-label">Profesor Seminar:</label>
+                                <div id="edit_profesorSeminarSelectize"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Proiect -->
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="edit_tipOreProiect">
+                            <label class="form-check-label" for="edit_tipOreProiect">Proiect</label>
+                            <input type="number" id="edit_nrOreProiect" class="form-control mt-2" style="display: none;" placeholder="Nr. ore">
+                            <div id="containerEditProfesorProiectSelectize" class="mt-2" style="display: none;">
+                                <label for="edit_profesorProiectSelectize" class="form-label">Profesor Proiect:</label>
+                                <div id="edit_profesorProiectSelectize"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="edit_grupaSelectize" class="form-label">Alege Grupa:</label>
+                        <div id="edit_grupaSelectize"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="edit_anSelect" class="form-label">Alege Anul:</label>
+                        <select id="edit_anSelect" class="form-select">
+                            <option value="I">Anul I</option>
+                            <option value="II">Anul II</option>
+                            <option value="III">Anul III</option>
+                            <option value="IV">Anul IV</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="edit_semestruSelect" class="form-label">Alege Semestrul:</label>
+                        <select id="edit_semestruSelect" class="form-select">
+                            <option value="I">Semestrul I</option>
+                            <option value="II">Semestrul II</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="edit_codMaterie" class="form-label">Cod Prescurtat:</label>
+                        <input type="text" id="edit_codMaterie" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="bi bi-x-circle me-2"></i>Închide
+                </button>
+                <button type="button" id="updateMaterieBtn" class="btn btn-primary">
+                    <i class="bi bi-check-circle me-2"></i>Salvează Modificările
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/navbar-admin.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/script_adauga_materii.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.min.js"></script>
+
+</body>
+</html>

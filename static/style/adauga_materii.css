@@ -1,0 +1,362 @@
+.col-md-9 {
+    width: 75% !important;
+    max-width: none !important;
+    flex: 0 0 75% !important;
+}
+
+.col-md-3 {
+    width: 25% !important;
+    max-width: none !important;
+    flex: 0 0 25% !important;
+}.table-responsive {
+    overflow-x: visible;
+    min-width: 100%;
+}
+
+.container {
+    max-width: 1400px !important;
+    margin: 0 auto;
+    padding: 25px 15px !important;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 95% !important;
+}
+
+h2, h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ffc107;
+}
+
+h3 {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+#listaMaterii {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    overflow: visible;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+#listaMaterii table {
+    width: 100%;
+    margin-bottom: 0;
+    table-layout: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+#listaMaterii table th {
+    white-space: nowrap;
+}
+
+#listaMaterii table thead th {
+    vertical-align: middle;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 12px 8px;
+    font-weight: 600;
+    border-bottom: 2px solid #303030;
+}
+
+#listaMaterii table tbody td {
+    padding: 10px 8px;
+    vertical-align: middle;
+    text-align: center;
+    border-top: 1px solid #dee2e6;
+    font-size: 0.95rem;
+    word-break: normal;
+}
+
+#listaMaterii table tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+.table-hover tbody tr:hover td, 
+.table-hover tbody tr:hover th {
+    background-color: #e9ecef;
+    transition: background-color 0.2s ease;
+}
+
+.action-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.action-btn {
+    padding: 5px 10px;
+    font-size: 0.875rem;
+    border-radius: 4px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pagination .page-item {
+    margin: 0 3px;
+}
+
+.pagination .page-link {
+    color: #1a1a1a;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    padding: 8px 12px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.pagination .page-link:hover {
+    color: #0056b3;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.pagination .page-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+.pagination .page-item.active .page-link {
+    color: #fff;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    background-color: #fff;
+    border-color: #dee2e6;
+    pointer-events: none;
+}
+
+#formAdaugaMaterie {
+    margin-left: 20px;
+    background: #f8f9fc;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#formAdaugaMaterie label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#formAdaugaMaterie .form-control,
+#formAdaugaMaterie .form-select {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 8px 12px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#formAdaugaMaterie .form-control:focus,
+#formAdaugaMaterie .form-select:focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+    outline: 0;
+}
+
+#formAdaugaMaterie .form-check {
+    margin-bottom: 8px;
+    padding-left: 1.75rem;
+}
+
+#formAdaugaMaterie .form-check-input {
+    margin-top: 0.25rem;
+    margin-left: -1.75rem;
+}
+
+#formAdaugaMaterie .form-check-label {
+    font-weight: 500;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+#formAdaugaMaterie .btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#formAdaugaMaterie .btn-primary {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #1a1a1a;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#formAdaugaMaterie .btn-primary:hover {
+    background-color: #e6a800;
+    border-color: #e6a800;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#formAdaugaMaterie .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+    width: 100%;
+}
+
+#formAdaugaMaterie .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.selectize-control {
+    margin-bottom: 15px;
+}
+
+.selectize-input {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 8px 12px;
+    box-shadow: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.selectize-input.focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+.selectize-dropdown {
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #ced4da;
+    border-top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.selectize-dropdown-content {
+    max-height: 200px;
+}
+
+.selectize-dropdown .option {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+}
+
+.selectize-dropdown .active {
+    background-color: #fff9e6;
+    color: #1a1a1a;
+}
+
+.modal-content {
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.modal-header {
+    background-color: #1a1a1a;
+    color: white;
+    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 15px 20px;
+}
+
+.modal-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.modal-header .btn-close {
+    color: white;
+    opacity: 0.8;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6;
+    padding: 15px 20px;
+}
+
+.modal-footer .btn {
+    padding: 8px 15px;
+    font-weight: 600;
+}
+
+.modal-footer .btn-primary {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #1a1a1a;
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #e6a800;
+    border-color: #e6a800;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 15px 10px !important;
+    }
+    
+    h2, h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md-3 {
+        margin-top: 30px;
+    }
+    
+    #listaMaterii table thead th,
+    #listaMaterii table tbody td {
+        padding: 8px 4px;
+        font-size: 0.85rem;
+    }
+    
+    .action-btn {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+    
+    #formAdaugaMaterie {
+        padding: 15px;
+    }
+}

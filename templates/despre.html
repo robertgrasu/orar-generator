@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despre Noi | ClassCoord</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/navbar.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/despre-noi.css')}}" />
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <div class="header-left">
+                <h1><span class="logo">ClassCoord</span></h1>
+            </div>
+            <div class="header-right">
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="/">Acasă</a></li>
+                        <li><a href="/orar_grupe">Orar Grupe</a></li>
+                        <li><a href="/orar_profesori">Orar Profesori</a></li>
+                        <li><a href="/orar_sali">Orar Săli</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/despre" class="active">Despre Noi</a></li>
+                    </ul>
+                    <div class="hamburger-menu">&#9776;</div>
+                </nav>
+                <a href="/login" class="login-btn">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="despre-container">
+            <div class="despre-header">
+                <h1>Despre ClassCoord</h1>
+            </div>
+
+            <div class="despre-section">
+                <h2>Povestea noastră</h2>
+                <p>ClassCoord a pornit dintr-o necesitate reală pe care am observat-o în universitatea noastră. Ca
+                    studenți și dezvoltatori, am experimentat direct problemele create de orarele complicate și
+                    suprapunerile frecvente. Ne-am întrebat: "Oare nu putem face ceva să îmbunătățim situația?"</p>
+                <p>Așa a început totul. Am format o echipă mică dar dedicată și am început să dezvoltăm o soluție care
+                    să facă viața mai ușoară pentru toată lumea din mediul universitar - profesori, studenți și personal
+                    administrativ.</p>
+            </div>
+
+            <div class="despre-section">
+                <h2>Ce face aplicația noastră</h2>
+                <p>ClassCoord este un instrument simplu dar puternic pentru crearea orarelor universitare. Știm cât de
+                    complicat poate fi să pui cap la cap toate piesele acestui puzzle: disponibilitatea profesorilor,
+                    sălile libere, materiile obligatorii și cele opționale, laboratoarele care necesită echipamente
+                    speciale...</p>
+                <p>Aplicația noastră rezolvă toate aceste probleme printr-un algoritm inteligent care ține cont de toate
+                    constrângerile și generează cel mai bun orar posibil. Nu mai e nevoie de zile întregi de muncă
+                    manuală și verificări nesfârșite - totul se întâmplă automat, rapid și eficient.</p>
+            </div>
+
+            <div class="despre-section">
+                <h2>Cum funcționează</h2>
+                <p>Folosirea ClassCoord e super simplă. Introduci datele despre profesori, materii, săli și grupe, apoi
+                    apeși un buton și programul face restul. Poți vizualiza orarul pentru orice grupă, profesor sau
+                    sală, și îl poți descărca în format PDF pentru a-l tipări sau distribui.</p>
+                <p>Interfața e intuitivă și prietenoasă, astfel încât oricine o poate folosi fără să aibă nevoie de
+                    pregătire specială. Am pus mare accent pe experiența utilizatorului și pe accesibilitate.</p>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🔄</div>
+                        <div class="feature-text">
+                            <h3>Generare automată</h3>
+                            <p>Creează orare complete în câteva secunde, eliminând munca manuală obositoare</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">👁️</div>
+                        <div class="feature-text">
+                            <h3>Vizualizare ușoară</h3>
+                            <p>Interfață simplă pentru găsirea rapidă a informațiilor de care ai nevoie</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📱</div>
+                        <div class="feature-text">
+                            <h3>Accesibil peste tot</h3>
+                            <p>Funcționează pe orice dispozitiv - laptop, tabletă sau telefon</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📄</div>
+                        <div class="feature-text">
+                            <h3>Export PDF</h3>
+                            <p>Salvează și tipărește orarele în format PDF pentru utilizare offline</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="despre-section">
+                <h2>De ce să folosești ClassCoord</h2>
+                <p>Crearea orarelor e o treabă complicată și consumatoare de timp când e făcută manual. Aplicația
+                    noastră transformă acest proces de la o corvoadă de săptămâni întregi într-o operațiune de câteva
+                    minute. Iată câteva din avantajele folosirii ClassCoord:</p>
+                <ul>
+                    <li>Economisești ore întregi de muncă minuțioasă și frustrantă</li>
+                    <li>Scapi de greșelile umane și de suprapunerile nedorite</li>
+                    <li>Folosești mai eficient resursele universității (săli, laboratoare, timp)</li>
+                    <li>Obții orare mai bune, optimizate pentru toată lumea</li>
+                    <li>Comunici mai ușor programul către studenți și profesori</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>Email: classcord@gmail.com</p>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2024 ClassCord. Toate drepturile rezervate.</p>
+        </div>
+
+        <div class="branding">
+            <img src="https://i.ibb.co/1ZTTcYZ/CLASSCOORD.png" alt="CLASSCOORD">
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.10/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.hamburger-menu').addEventListener('click', function () {
+                document.querySelector('.nav-list').classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

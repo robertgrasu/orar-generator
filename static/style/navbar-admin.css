@@ -1,0 +1,219 @@
+main {
+
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 21px;
+    flex-grow: 1;
+
+
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #232526, #414345);
+    background: linear-gradient(to right, #232526, #414345);
+    color: #d9dee7;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.contact-info p,
+.copyright p {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 0.9em;
+    line-height: 0.6;
+    white-space: nowrap;
+}
+
+.branding img {
+    max-height: 80px;
+    width: auto;
+}
+
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.header-left,
+.header-right {
+    flex: 1;
+}
+
+.header-left {
+    justify-content: flex-start;
+}
+
+
+.header-right {
+    justify-content: flex-end;
+    padding-left: 20px;
+}
+
+header {
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #232526, #414345);
+    background: linear-gradient(to right, #232526, #414345);
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.header-left {
+    flex: 0 0 auto;
+    text-align: left;
+    padding-right: 20px;
+    flex-shrink: 0;
+
+}
+
+.header-right {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    padding-left: 60px;
+    color: #ffc107;
+    font-weight: 600;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    padding-right: 130px;
+    margin-left: 0;
+    padding-left: 0;
+    flex-grow: 1;
+
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding-right: 10px;
+
+}
+
+.nav-list a:hover {
+    color: #ffc107;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #232526;
+        background: -webkit-linear-gradient(to right, #232526, #414345);
+        background: linear-gradient(to right, #232526, #414345);
+        text-align: center;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .header-right .hamburger-menu {
+        display: block;
+    }
+}
+
+.login-btn {
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    padding: 8px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    margin-left: auto;
+}
+
+.login-btn:hover {
+    background-color: #e6a500;
+    color: white;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+    .login-btn {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .hamburger-menu {
+        order: -1;
+    }
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu:hover {
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    color: black;
+}
+
+.nav-list .dropdown-menu a {
+    color: black;
+}

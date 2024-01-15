@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestionare Profesori</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.bootstrap4.min.css"
+        rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/navbar-admin2.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/adauga_profesori.css')}}" />
+
+</head>
+
+<body>
+<header>
+    <div class="nav">
+        <div class="header-left">
+            <h1><span class="logo">ClassCoord</span></h1>
+        </div>
+        <div class="header-right">
+            <nav>
+                <ul class="nav-list">
+                     <li><a href="/" class="active">Acasa</a>
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownOrar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Gestionare Orare
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownOrar">
+                            <li><a class="dropdown-item" href="/orar_grupe_admin">Orar Grupe</a></li>
+                            <li><a class="dropdown-item" href="/orar_profesori_admin">Orar Profesori</a></li>
+                            <li><a class="dropdown-item" href="/orar_sali_admin">Orar Sali</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAdauga" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Gestionare date
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownAdauga">
+                        <li><a class="dropdown-item" href="/formular_adauga_sala">Adauga Sali</a></li>
+                        <li><a class="dropdown-item" href="/formular_adauga_materii">Adauga Materii</a></li>
+                        <li><a class="dropdown-item" href="/formular_adauga_departament">Adauga Departamente</a></li>
+                        <li><a class="dropdown-item" href="/formular_adauga_grupe">Adauga Grupe</a></li>
+                        <li><a class="dropdown-item" href="/formular_adauga_profesori">Adauga Profesori</a></li>
+                    </ul>
+                </li>
+
+                    <li><a href="/admin_register">Creare utilizatori</a></li>
+                </ul>
+<!--                <div class="hamburger-menu">&#9776;</div>-->
+            </nav>
+            <a href="/logout" class="login-btn">Logout</a>
+        </div>
+    </div>
+</header>
+    <div class="container mt-4">
+        <div class="row">
+
+            <!-- Tabelul cu profesorii existenti si cautare-->
+            <div class="col-md-9">
+
+
+                <h2>Profesori Existenti</h2>
+                <div class="input-group mb-3">
+                    <input type="text" id="cautareProfesor" class="form-control"
+                        placeholder="Cauta dupa nume sau prenume..." aria-label="Cauta dupa nume sau prenume">
+                    <button id="butonCautare" class="btn btn-primary" type="button">Cauta</button>
+                </div>
+                <div class="table-responsive">
+
+                    <table class="table table-striped table-hover text-center">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nume</th>
+                                <th>Prenume</th>
+                                <th>Departament</th>
+                                <th>facultate</th>
+                                <th>Disponibilitate</th>
+                                <th>Email</th>
+                                <th>Numar de telefon</th>
+                                <th>Actiuni</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Aici vor fi afisati profesorii -->
+                        </tbody>
+                    </table>
+                </div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <!-- Butoanele de paginare vor fi adaugate dinamic din js-->
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Formularul pentru adaugarea profesorului-->
+            <div class="col-md-3">
+                <h2 style="padding-top: 120px; font-size:20px; text-align: center;">Adauga Profesor Nou</h2>
+                <form id="formAdaugaProfesor">
+                    <div class="mb-3">
+                        <label for="nume">Nume:</label>
+                        <input type="text" id="nume" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="prenume">Prenume:</label>
+                        <input type="text" id="prenume" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="departament">Departament:</label>
+                        <div id="departament_selectize"></div> 
+                    </div>
+                    <div class="mb-3">
+                        <label for="facultate">Facultate:</label>
+                        <select id="facultate" class="form-control">
+                            <option value="">Selecteaza...</option>
+                            <option value="Facultatea de Inginerie">Facultatea de Inginerie</option>
+                            <option value="Facultatea de Stiinte">Facultatea de Stiinte</option>
+                            <option value="Facultatea de Litere">Facultatea de Litere</option>
+                            <option value="Facultatea de Sport">Facultatea de Sport</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="disponibilitate">Disponibilitate:</label>
+                        <select class="form-control" id="disponibilitate" required
+                            onchange="verificaDisponibilitate(this)">
+                            <option value="">Selecteaza...</option>
+                            <option value="zilnic">Zilnic între 9-19</option>
+                            <option value="personalizat">Interval personalizat</option>
+                        </select>
+                    </div>
+                    <div class="mb-3" id="disponibilitatePersonalizata" style="display: none;">
+                        <ul class="list-unstyled disponibilitate-lista">
+                            <li><span>Luni:</span> <input type="text" id="luni" class="form-control"
+                                    placeholder="09-19"></li>
+                            <li><span>Marti:</span> <input type="text" id="marti" class="form-control"
+                                    placeholder="09-19"></li>
+                            <li><span>Miercuri:</span> <input type="text" id="miercuri" class="form-control"
+                                    placeholder="09-19"></li>
+                            <li><span>Joi:</span> <input type="text" id="joi" class="form-control" placeholder="09-19">
+                            </li>
+                            <li><span>Vineri:</span> <input type="text" id="vineri" class="form-control"
+                                    placeholder="09-19"></li>
+                            <li><span>Sâmbata:</span> <input type="text" id="sambata" class="form-control"
+                                    placeholder="09-19"></li>
+                            <li><span>Duminica:</span> <input type="text" id="duminica" class="form-control"
+                                    placeholder="09-19"></li>
+                        </ul>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefon">Numar de Telefon:</label>
+                        <input type="tel" id="telefon" class="form-control" required>
+                    </div>
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-primary">Adauga Profesor</button>
+                        <button type="reset" class="btn btn-secondary">Reseteaza</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal pentru editarea profesorului -->
+    <div class="modal fade" id="modalEditareProfesor" tabindex="-1" aria-labelledby="modalEditareProfesorLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditareProfesorLabel">Editeaza Profesor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formEditareProfesor">
+                        <input type="hidden" id="edit_id_profesor">
+                        <div class="mb-3">
+                            <label for="edit_nume">Nume:</label>
+                            <input type="text" id="edit_nume" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_prenume">Prenume:</label>
+                            <input type="text" id="edit_prenume" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_departament">Departament:</label>
+                            <div id="edit_departament_selectize"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_facultate">Facultate:</label>
+                            <select id="edit_facultate" class="form-control">
+                                <option value="">Selecteaza...</option>
+                                <option value="Facultatea de Inginerie">Facultatea de Inginerie</option>
+                                <option value="Facultatea de Stiinte">Facultatea de Stiinte</option>
+                                <option value="Facultatea de Litere">Facultatea de Litere</option>
+                                <option value="Facultatea de Sport">Facultatea de Sport</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_disponibilitate">Disponibilitate:</label>
+                            <select class="form-control" id="edit_disponibilitate" required
+                                onchange="verificaDisponibilitateEdit(this)">
+                                <option value="">Selecteaza...</option>
+                                <option value="zilnic">Zilnic între 9-19</option>
+                                <option value="personalizat">Interval personalizat</option>
+                            </select>
+                        </div>
+                        <div class="mb-3" id="edit_disponibilitatePersonalizata" style="display: none;">
+                            <ul class="list-unstyled disponibilitate-lista">
+                                <li><span>Luni:</span> <input type="text" id="edit_luni" class="form-control"></li>
+                                <li><span>Marti:</span> <input type="text" id="edit_marti" class="form-control"></li>
+                                <li><span>Miercuri:</span> <input type="text" id="edit_miercuri" class="form-control">
+                                </li>
+                                <li><span>Joi:</span> <input type="text" id="edit_joi" class="form-control"></li>
+                                <li><span>Vineri:</span> <input type="text" id="edit_vineri" class="form-control"></li>
+                                <li><span>Sâmbata:</span> <input type="text" id="edit_sambata" class="form-control">
+                                </li>
+                                <li><span>Duminica:</span> <input type="text" id="edit_duminica" class="form-control">
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="edit_email">Email:</label>
+                            <input type="email" id="edit_email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_telefon">Numar de Telefon:</label>
+                            <input type="tel" id="edit_telefon" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Salveaza Modificarile</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal pentru afisarea disponibilitatii -->
+    <div class="modal fade" id="disponibilitateModal" tabindex="-1" aria-labelledby="disponibilitateModalLabel"
+        aria-hidden="true" data-bs-backdrop="true" data-bs-keyboard="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="disponibilitateModalLabel">Detalii Disponibilitate</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="disponibilitateModalBody">
+                    <!-- Aici vor fi adaugate detaliile disponibilitatii din js-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="hoverModal" class="custom-hover-modal" style="display: none;">
+        <div class="modal-content">
+            <div id="hoverModalBody"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/navbar-admin.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/script_adauga_profesori.js') }}"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
