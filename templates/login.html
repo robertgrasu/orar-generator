@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logare | ClassCoord</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/navbar.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/login.css')}}"/>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="header-left">
+                <h1><span class="logo">ClassCoord</span></h1>
+            </div>
+            <div class="header-right">
+                <ul class="nav-list">
+                    <li><a href="/" class="active">Acasă</a></li>
+                    <li><a href="/orar_grupe">Orar Grupe</a></li>
+                    <li><a href="/orar_profesori">Orar Profesori</a></li>
+                    <li><a href="/orar_sali">Orar Săli</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/despre">Despre Noi</a></li>
+                </ul>
+                <div class="hamburger-menu">&#9776;</div>
+                <a href="/login" class="login-btn">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h2>Autentificare</h2>
+            </div>
+
+            <div class="login-body">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ category }} d-flex align-items-center" role="alert">
+                                {% if category == 'success' %}
+                                    <i class="bi bi-check-circle-fill me-2"></i>
+                                {% elif category == 'danger' %}
+                                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                                {% endif %}
+                                <div>{{ message }}</div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                <form class="login-form" method="POST" action="{{ url_for('login') }}">
+                    <div class="form-group">
+                        <label for="username">
+                            <i class="bi bi-person-fill me-2"></i>Nume Utilizator
+                        </label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Introduceți numele de utilizator" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">
+                            <i class="bi bi-lock-fill me-2"></i>Parolă
+                        </label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Introduceți parola" required>
+                    </div>
+                    
+                    <button type="submit" class="login-btn-submit">
+                        <i class="bi bi-box-arrow-in-right me-2"></i>Conectare
+                    </button>
+                </form>
+            </div>
+            
+            <div class="login-footer">
+                <p>Sistem pentru administrarea orarelor</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const navList = document.querySelector('.nav-list');
+            
+            hamburgerMenu.addEventListener('click', function() {
+                navList.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="ClassCoord este o aplicație web inovatoare dedicată instituțiilor universitare, proiectată pentru a simplifica și automatiza crearea orarelor.">
+  <title>ClassCoord - Orare Universitare</title>
+
+  <!-- <script>
+    const img = new Image();
+    img.src = "{{ url_for('static', filename='img/bg.png') }}";
+  </script> -->
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/navbar.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/index.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-light">
+
+  <header>
+    <div class="nav">
+      <div class="header-left">
+        <h1><span class="logo">ClassCoord</span></h1>
+      </div>
+      <div class="header-right">
+        <nav>
+          <ul class="nav-list">
+            <li><a href="/" class="active">Acasă</a></li>
+            <li><a href="/orar_grupe">Orar Grupe</a></li>
+            <li><a href="/orar_profesori">Orar Profesori</a></li>
+            <li><a href="/orar_sali">Orar Săli</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/despre">Despre Noi</a></li>
+          </ul>
+          <div class="hamburger-menu">&#9776;</div>
+        </nav>
+        <a href="/login" class="login-btn">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero-content">
+      <h1 class="main-title">ClassCoord</h1>
+      <h2>Platformă de orare pentru universitate</h2>
+      <p>Soluția modernă pentru planificarea și simplificarea procesului de creare și gestionare a orarelor</p>      
+      <div class="cta-buttons">
+        <a href="/orar_grupe" class="cta-button">Vizualizează orare <i class="fas fa-arrow-right ml-1"></i></a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="contact-info">
+      <p>Email: classcord@gmail.com</p>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2024 ClassCoord. Toate drepturile rezervate.</p>
+    </div>
+    <div class="branding">
+      <img src="https://i.ibb.co/1ZTTcYZ/CLASSCOORD.png" alt="CLASSCOORD">
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.querySelector('.hamburger-menu');
+      const navList = document.querySelector('.nav-list');
+      hamburger.addEventListener('click', () => navList.classList.toggle('active'));
+    });
+  </script>
+</body>
+</html>
