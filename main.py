@@ -5,13 +5,13 @@ import os
 
 # Initializare aplicatie Flask
 app = Flask(__name__)
-app.secret_key = 'SECRET_KEY_PLACEHOLDER'
+app.secret_key = 'secret_key'
 
 # Configurare conexiune MySQL
-app.config['MYSQL_HOST'] = 'DATABASE_HOST'
-app.config['MYSQL_USER'] = 'DB_CREDENTIAL'
-app.config['MYSQL_PASSWORD'] = 'DB_CREDENTIAL'
-app.config['MYSQL_DB'] = 'DB_CREDENTIAL'
+app.config['MYSQL_HOST'] = 'db_host'
+app.config['MYSQL_USER'] = 'db_user'
+app.config['MYSQL_PASSWORD'] = 'db_passw'
+app.config['MYSQL_DB'] = 'db_name'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
 # Import module dupa initializare aplicatie

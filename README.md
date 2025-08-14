@@ -1,5 +1,5 @@
 # ClassCoord - Aplicație Web pentru crearea orarelor pentru universitate
-
+**Demo:** https://orar.rgsoft.ro/
 ## Despre proiect
 
 ClassCoord este o aplicație web dezvoltată pentru a simplifica și automatiza procesul de creare a orarelor în mediul universitar. Acest proiect a apărut din nevoia de a eficientiza una dintre cele mai complexe sarcini administrative cu care se confruntă universitățile - planificarea și gestionarea orarelor.
