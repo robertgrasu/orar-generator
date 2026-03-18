@@ -1,4 +1,4 @@
-# ClassCoord — Aplicatie Web pentru Generarea Orarelor Universitare
+# ClassCoord - Platforma Web pentru generarea orarelor pentru universitate
 
 **Demo:** https://orar.rgsoft.ro/
 
