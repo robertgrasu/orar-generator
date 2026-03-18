@@ -1,6 +1,7 @@
 # ClassCoord — Aplicatie Web pentru Generarea Orarelor Universitare
 
 **Demo:** https://orar.rgsoft.ro/
+
 **Versiune noua (in dezvoltare):** https://eduorar.ro/
 
 ## Despre proiect
